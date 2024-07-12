@@ -123,7 +123,6 @@ function Container(props) {
         </div>
       </div>
 
-      <Footer />
     </>
   );
 }

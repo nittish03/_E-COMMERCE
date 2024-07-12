@@ -52,16 +52,16 @@ function Login(props) {
 
   return (
     <>
-      <div className="df bg-light p-5">
-        <form onSubmit={handleSubmit} className="log shadow p-4 rounded">
-          <div id="container" className="text-center">
-            <h1 id="h" className="text-primary mb-4">Log In</h1>
+ <div className="df bg-light p-5 login-container">
+        <form onSubmit={handleSubmit} className="log shadow p-4 rounded login-form">
+          <div id="container" className="text-center login-content">
+            <h1 id="h" style={{color:"#ff4500"}} className=" mb-4 login-title">Log In</h1>
             <input required
               id="mail"
               onChange={handleForm}
               name="mail"
               type="email"
-              className="form-control mb-3"
+              className="form-control mb-3 login-input"
               placeholder="Email Address"
             />
             <input required
@@ -69,28 +69,27 @@ function Login(props) {
               onChange={handleForm}
               name="password"
               type="password"
-              className="form-control mb-3"
+              className="form-control mb-3 login-input"
               placeholder="Password"
             />
-            <div id="checkbox" className="form-check mb-3">
+            <div id="checkbox" className="form-check mb-3 login-checkbox">
               <input onClick={showP} id="cb" type="checkbox" className="form-check-input" />
               <label className="form-check-label" htmlFor="cb">Show password</label>
             </div>
-            <button id="bn" className="btn btn-primary w-100 ">Log in</button>
-            <a className="fp text-primary d-block mb-3" href="#">
+            <button id="bn" className="btn  btn-primary w-70 login-button">Log in</button>
+            <a className="fp text-primary d-block mb-3 login-forgot" href="#">
               Forgot password?
             </a>
             <div>
-              <p className="Ac text-white mb-4">Don't have an account</p>
+              <p className="Ac text-white mb-4 login-signup-text">Don't have an account</p>
             </div>
-            <Link className="fp btn btn-outline-primary" to="/signup">
+            <Link className="fp btn btn-outline-primary login-signup-button" to="/signup">
               Sign up
             </Link>
           </div>
         </form>
       </div>
-    </>
-  );
+    </>  );
 }
 
 export default Login;
