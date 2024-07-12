@@ -71,6 +71,7 @@
 
 .col {
   border-radius: 16px;
+  height: fit-content;
 }
 
 .back {
