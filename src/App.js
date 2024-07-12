@@ -1,24 +1,85 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Container from "./components/Container";
+import Footer from "./components/Footer";
+import Carousel from "./components/Carouselitems";
+import Proptypes from "prop-types";
+import Login from "./components/Login.js";
+import Signup from "./components/Signup.js";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  BrowserRouter,
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Navbar></Navbar>
+        <div>
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={<Container key="/"></Container>}
+            ></Route>
+            <Route
+              exact
+              path="/home"
+              element={<Container key="home"></Container>}
+            ></Route>
+            <Route
+              exact
+              path="/jewelery"
+              element={
+                <Container key="jewelery" category="jewelery"></Container>
+              }
+            ></Route>
+            <Route
+              exact
+              path="/electronics"
+              element={
+                <Container key="electronics" category="electronics"></Container>
+              }
+            ></Route>
+            <Route
+              exact
+              path="men clothing"
+              element={
+                <Container
+                  key="men clothing"
+                  category="men's clothing"
+                ></Container>
+              }
+            ></Route>
+            <Route
+              exact
+              path="/women clothing"
+              element={
+                <Container
+                  key="women clothing"
+                  category="women's clothing"
+                ></Container>
+              }
+            ></Route>
+            <Route
+              exact
+              path="/login"
+              element={<Login key="log in"></Login>}
+            ></Route>
+            <Route
+              exact
+              path="/signup"
+              element={<Signup key="sign up"></Signup>}
+            ></Route>
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </>
   );
 }
 

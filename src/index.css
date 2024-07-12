@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.E-com{
+  margin-top: 10px;
+  margin-right: 40px;
+}
+.log{
+  width: 150px;
+}
+.navcol{
+  background-color: #131921;
+  
+}
