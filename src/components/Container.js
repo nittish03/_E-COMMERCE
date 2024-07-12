@@ -56,6 +56,9 @@ function Container(props) {
 
   return (
     <>
+    <div style={{color:"white"}} className="container d-flex justify-content-center">
+      <h1>{props.category?props.category:""}</h1>
+    </div>
       <div className="my-4">
         <div className="container">
           <div className="row">
