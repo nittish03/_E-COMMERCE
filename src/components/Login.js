@@ -25,7 +25,6 @@ function Login(props) {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
     const response = await fetch("http://localhost:3080/", {
       method: "POST",
       body: JSON.stringify(form),
@@ -36,6 +35,7 @@ function Login(props) {
     const data = await response.json();
     setUsers(data);
     alert("logged in successfully");
+
   };
 
   const getUsers = async (req, res) => {
@@ -56,7 +56,7 @@ function Login(props) {
         <form onSubmit={handleSubmit} className="log shadow p-4 rounded">
           <div id="container" className="text-center">
             <h1 id="h" className="text-primary mb-4">Log In</h1>
-            <input
+            <input required
               id="mail"
               onChange={handleForm}
               name="mail"
@@ -64,7 +64,7 @@ function Login(props) {
               className="form-control mb-3"
               placeholder="Email Address"
             />
-            <input
+            <input required
               id="password"
               onChange={handleForm}
               name="password"
