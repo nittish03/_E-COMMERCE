@@ -1,8 +1,15 @@
-To start the website.
-First start the server in the node server folder using nodemon index.js or node index.js
+there is already a build folder in the app... so the app can be easily started using commands
+ npm install -g serve
+   serve -s build
 
-then start the react app by npm start
-the user data can be easily seen in the console as well whenever a new user enters
+(make sure that the server is running in the node-server folder (index.js))
+to start the server. run the command 
+nodemon index.js or node index.js in node server folder.
+after that... start the app
 
-instead of buttons for scrolling through products i could also add the infinite scroll feature like i did in the news app but due to lack of resources like a good ecommerce api... i didn't .
-hope u would take everything into account
+   or... you can first make the build version of the app by writing the command
+   npm run build
+
+   after the build folder is created . the app can be started by 
+    npm install -g serve
+   serve -s build
